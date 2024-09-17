@@ -1,4 +1,4 @@
-use actix_web::{get, web::resource, App, HttpResponse, HttpServer, Responder};
+use actix_web::{App, HttpServer};
 
 mod actix_web_files;
 
