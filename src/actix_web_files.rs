@@ -1,8 +1,8 @@
-use actix_web::web::{get, post, ServiceConfig};
+use actix_web::web::{resource, ServiceConfig};
 
 mod services;
 
 pub fn configure_routes(cfg: &mut ServiceConfig) {
-    cfg.route("/cars", get().to(self::services::cars::handler))
-        .route("/rent", post().to(self::services::rent::handler));
+    cfg.service(resource("/cars").get(self::services::cars::get::handler))
+        .service(resource("/rent").post(self::services::rent::handler));
 }

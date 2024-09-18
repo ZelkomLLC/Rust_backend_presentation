@@ -1,5 +1,1 @@
-use actix_web::Responder;
-
-pub async fn handler() -> impl Responder {
-    "Hello cars"
-}
+pub mod get;
